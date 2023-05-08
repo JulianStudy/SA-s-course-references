@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML5 New features in forms</title>
+      </head>
+      <body>
+<form>
+
+<label>Firstname</label>
+<input type="text" name="fname" autofocus required/>	
+<!-- autofocus attribute specifies an <input> element should automatically get focus when the page loads 
+required specified that the input field must be filled out -->
+
+<label>Surname</label>
+<input type="text" name="sname" />
+
+<label>Select your favourite colour</label>
+<input type="color" id ="color" value="#000000" list="colour"/>
+<datalist id="colour">
+  <option>#ff0000></option>
+  <option>#0000ff></option>
+  <option>#00ff00></option>
+  <option>#00ffff></option>
+</datalist>
+
+<label>Select your date of birth</label>
+<input type="date" id ="dob" />
+
+<p>
+<label>Which year of the programme are you on?</label>
+<input type="range" value="0" list="yop" min="1" max="4" />
+<datalist id="yop">
+  <option>1></option>
+  <option>2></option>
+  <option>3></option>
+  <option>4></option>		
+</datalist>
+
+<label>Which browser do you use?</label>
+<input type="text" list="browsers" value=""/> 
+<datalist id="browsers">
+  <option value="Internet Explorer"></option>
+  <option value="Firefox"></option>
+  <option value="Chrome"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+</datalist>
+
+<label>Product Number:
+<input pattern="[0-9][A-Z]{3}" name="product" type="text" title="Single digit followed by three uppercase letters." />
+</label>
+
+<label>Email address</label>
+<input name="email" type="email" required placeholder="Enter a valid email address" pattern= "/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" />
+</p>
+
+</form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="number" name="a" value="0">+
+<input type="number" name="b" value="0">=
+<output name="x" for="a b"></output>
+</form>
+
+</body>
+</html>
